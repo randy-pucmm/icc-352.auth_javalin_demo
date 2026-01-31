@@ -1,0 +1,80 @@
+:root {
+  --primary-color: #37353e;
+  --secondary-color: #44444e;
+  --tertiary-color: #715a5a;
+  --accent-color: #d3dad9;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--tertiary-color)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 240px;
+  height: 80px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+}
+
+.card {
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--tertiary-color)
+  );
+  padding: 2rem;
+  width: 30%;
+  text-align: center;
+  color: var(--accent-color);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card h1 {
+  margin-bottom: 1rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--accent-color);
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--tertiary-color);
+  color: var(--accent-color);
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #403535;
+}
+
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

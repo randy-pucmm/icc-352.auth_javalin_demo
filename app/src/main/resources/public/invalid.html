@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Credenciales Inválidas</title>
+    <link rel="stylesheet" href="/global.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1>Credenciales Inválidas</h1>
+      <p>Reintenta Logearte Nuevamente</p>
+      <p>
+        Serás redirigido automáticamente en
+        <span id="counter">5</span> segundos...
+      </p>
+      <a class="btn" href="/logout">Regresar</a>
+    </div>
+  </body>
+</html>
+
+<script>
+  (function () {
+    let seconds = 5;
+    const counterElem = document.getElementById("counter");
+
+    const countdown = setInterval(() => {
+      seconds--;
+      counterElem.textContent = seconds;
+
+      if (seconds <= 0) {
+        clearInterval(countdown);
+        window.location.href = "http://localhost:7000/login.html";
+      }
+    }, 1000);
+  })();
+</script>
